@@ -1,0 +1,13 @@
+@for(veg of vegetables; track veg){
+    <div>
+        {{veg.nome}} - {{veg.prezzo}}<br>
+        <input type="number" #nProdotti><button (click)="addToCart(veg, nProdotti)">Aggiungi</button>
+    </div><br>
+}
+
+@if(added){
+    <app-details [dettagli]="added"></app-details>
+}
+<br><br>
+
+<app-carrello [carrello]="carrello"></app-carrello>
